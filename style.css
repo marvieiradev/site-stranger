@@ -15,6 +15,7 @@ body {
   background-color: #0c0102;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 button {
@@ -28,6 +29,39 @@ header {
   padding: 4vw;
   position: absolute;
   z-index: 2;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0;
+  border-bottom: 1px solid white;
+}
+
+.bgMonster {
+  background-image: url("img/bg-sec2.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
 }
 
 .hero {
@@ -49,7 +83,7 @@ header {
   .left {
     h3 {
       font-size: 24px;
-      font-weight: 300;
+      font-weight: 400;
       letter-spacing: 2px;
     }
 
@@ -68,16 +102,160 @@ header {
       margin-bottom: 32px;
       text-align: end;
     }
-    button {
-      background-color: transparent;
-      color: white;
-      font-size: 16px;
+  }
+}
+
+.citySection {
+  flex-direction: column;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cards {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      background-image: url("img/card1.webp");
+      background-size: cover;
+      background-position: center;
+      width: 32%;
+      aspect-ratio: 16/9;
+      height: auto;
       display: flex;
-      gap: 12px;
-      border: none;
-      outline: none;
-      padding: 16px 0;
-      border-bottom: 1px solid white;
+      align-items: end;
+      justify-content: space-between;
+      padding: 20px;
     }
+
+    .card:nth-child(2) {
+      background-image: url("img/card2.webp");
+    }
+
+    .card:nth-child(3) {
+      background-image: url("img/card3.webp");
+    }
+  }
+}
+
+.testimonialsSection {
+  flex-direction: column;
+
+  .logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .testimonials {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    .testimonial {
+      width: 31%;
+    }
+  }
+}
+
+.thanksSection {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  p {
+    margin-top: 16px;
+    font-size: 18px;
+    max-width: 600px;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("img/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+
+  .footerContent {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .footerLogo {
+      width: 30%;
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat", serif;
+      }
+    }
+
+    .footerSections {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+      align-items: end;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .social {
+        ul {
+          display: flex;
+          gap: 12px;
+        }
+      }
+    }
+  }
+  .footerLogos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .infinteText {
+    width: max-content;
+    display: flex;
+
+    h3 {
+      color: rgb(191, 191, 191);
+      font-size: 12vw;
+      font-family: "Benguiat", serif;
+      mix-blend-mode: color-dodge;
+      animation: infiniteText 10s linear infinite;
+      padding-left: 8vw;
+    }
+  }
+}
+
+@keyframes infiniteText {
+  100% {
+    transform: translateX(-100%);
   }
 }
